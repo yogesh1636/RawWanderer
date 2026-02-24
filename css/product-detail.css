@@ -1,0 +1,146 @@
+.product-detail {
+    padding: 6rem 0 4rem;
+}
+
+.product-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: start;
+}
+
+.product-image {
+    background: rgba(35, 47, 62, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 153, 0, 0.2);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-main-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f5f5f5;
+}
+
+.product-main-info .rating {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.overview {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.product-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.features-section, .target-audience, .price-section, .verdict {
+    background: rgba(35, 47, 62, 0.5);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 153, 0, 0.1);
+}
+
+.features-section h2, .target-audience h2, .price-section h2, .verdict h2 {
+    color: #FF9900;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.features-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.features-list li {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pros, .cons {
+    background: rgba(35, 47, 62, 0.5);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 153, 0, 0.1);
+}
+
+.pros h2 {
+    color: #4CAF50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.cons h2 {
+    color: #f44336;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.pros ul, .cons ul, .target-audience ul {
+    list-style: none;
+}
+
+.pros ul li, .cons ul li, .target-audience ul li {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    color: #ccc;
+}
+
+.price-section {
+    text-align: center;
+}
+
+.price-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.verdict p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .product-header {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .product-main-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+}
