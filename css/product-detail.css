@@ -21,6 +21,8 @@
     width: 100%;
     height: auto;
     display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 .product-main-info h1 {
