@@ -145,4 +145,8 @@
     .features-list {
         grid-template-columns: 1fr;
     }
+
+    .product-content {
+        padding: 0 1rem;
+    }
 }
