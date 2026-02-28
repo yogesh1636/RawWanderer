@@ -32,4 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    document.querySelectorAll('.product-card img').forEach(img => {
+        img.addEventListener('click', function() {
+            const reviewLink = this.closest('.product-card').querySelector('a[href*="product-"]');
+            if (reviewLink) {
+                window.location.href = reviewLink.getAttribute('href');
+            }
+        });
+    });
 });
