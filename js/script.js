@@ -55,6 +55,176 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const enhanceProductReviewPage = () => {
+        const detailSection = document.querySelector(".product-detail");
+        if (!detailSection) {
+            return;
+        }
+
+        document.body.classList.add("review-page");
+
+        const detailContainer = detailSection.querySelector(".container");
+        const title = detailSection.querySelector("h1");
+        const intro = detailSection.querySelector(".product-intro, .overview");
+        const rating = detailSection.querySelector(".rating");
+        const buyLink = detailSection.querySelector('a[href*="amzn.to"]');
+        const featuresHeading = Array.from(detailSection.querySelectorAll("h2")).find((heading) =>
+            heading.textContent.toLowerCase().includes("feature")
+        );
+        const featuresList = featuresHeading?.nextElementSibling?.matches("ul") ? featuresHeading.nextElementSibling : detailSection.querySelector(".features-list");
+        const whoHeading = Array.from(detailSection.querySelectorAll("h2")).find((heading) =>
+            heading.textContent.toLowerCase().includes("who should buy")
+        );
+        const whoList = whoHeading?.nextElementSibling?.matches("ul") ? whoHeading.nextElementSibling : detailSection.querySelector(".target-audience ul");
+        const verdictHeading = Array.from(detailSection.querySelectorAll("h2")).find((heading) =>
+            heading.textContent.toLowerCase().includes("verdict")
+        );
+        const verdictSection = verdictHeading?.closest(".verdict") || verdictHeading?.parentElement;
+        const gallery = detailSection.querySelector(".product-images");
+        const standaloneImage = detailSection.querySelector(".product-image");
+
+        if (detailContainer && title) {
+            const crumbs = document.createElement("div");
+            crumbs.className = "review-crumbs";
+            crumbs.innerHTML = '<a href="index.html">Home</a><span>/</span><a href="products.html">Products</a><span>/</span><span>Review</span>';
+            detailContainer.prepend(crumbs);
+        }
+
+        if (title && !detailSection.querySelector(".review-kicker")) {
+            const kicker = document.createElement("div");
+            kicker.className = "review-kicker";
+            kicker.textContent = "RawWanderer Review";
+            title.parentElement?.insertBefore(kicker, title);
+        }
+
+        if (intro && featuresList) {
+            const featureItems = Array.from(featuresList.querySelectorAll("li"))
+                .map((item) => item.textContent.trim())
+                .filter(Boolean)
+                .slice(0, 3);
+
+            if (featureItems.length && !intro.parentElement?.querySelector(".review-highlight")) {
+                const chipRow = document.createElement("div");
+                chipRow.className = "review-highlight";
+                featureItems.forEach((item) => {
+                    const chip = document.createElement("span");
+                    chip.className = "review-chip";
+                    chip.textContent = item;
+                    chipRow.appendChild(chip);
+                });
+
+                intro.insertAdjacentElement("afterend", chipRow);
+            }
+        }
+
+        if (title && !detailSection.querySelector(".review-quick-grid")) {
+            const reviewCountMatch = rating?.textContent.match(/\(([^)]+)\)/);
+            const quickGrid = document.createElement("div");
+            quickGrid.className = "review-quick-grid";
+
+            const stats = [
+                { label: "Review signal", value: reviewCountMatch ? reviewCountMatch[1] : "High interest" },
+                { label: "Feature count", value: featuresList ? `${featuresList.querySelectorAll("li").length}+ highlights` : "Quick review" },
+                { label: "Best for", value: whoList?.querySelector("li")?.textContent.trim() || "Everyday buyers" }
+            ];
+
+            stats.forEach((stat) => {
+                const card = document.createElement("div");
+                card.className = "review-stat";
+                card.innerHTML = `<strong>${stat.value}</strong><span>${stat.label}</span>`;
+                quickGrid.appendChild(card);
+            });
+
+            const targetContainer = intro?.parentElement || title.parentElement;
+            targetContainer?.appendChild(quickGrid);
+        }
+
+        if (buyLink && !detailSection.querySelector(".review-buy-box") && verdictSection) {
+            const buyBox = document.createElement("div");
+            buyBox.className = "review-buy-box";
+            buyBox.innerHTML = `
+                <h3>Ready to check the deal?</h3>
+                <p>This review keeps the original affiliate link already saved in your project.</p>
+            `;
+
+            const clonedLink = buyLink.cloneNode(true);
+            clonedLink.textContent = "Check on Amazon";
+            clonedLink.setAttribute("rel", "noopener noreferrer");
+            buyBox.appendChild(clonedLink);
+            verdictSection.appendChild(buyBox);
+        }
+
+        if (title && !detailSection.querySelector(".review-jump-nav")) {
+            const jumpNav = document.createElement("div");
+            jumpNav.className = "review-jump-nav";
+
+            const jumpTargets = [
+                { label: "Features", heading: featuresHeading },
+                { label: "Pros & Cons", heading: Array.from(detailSection.querySelectorAll("h2, h3")).find((el) => el.textContent.toLowerCase().includes("pros")) },
+                { label: "Who It's For", heading: whoHeading },
+                { label: "Verdict", heading: verdictHeading }
+            ].filter((item) => item.heading);
+
+            jumpTargets.forEach((item, index) => {
+                const id = item.heading.id || `review-section-${index + 1}`;
+                item.heading.id = id;
+                const link = document.createElement("a");
+                link.href = `#${id}`;
+                link.textContent = item.label;
+                jumpNav.appendChild(link);
+            });
+
+            if (jumpNav.childElementCount) {
+                const targetContainer = intro?.parentElement || title.parentElement;
+                targetContainer?.appendChild(jumpNav);
+            }
+        }
+
+        if (gallery && !gallery.classList.contains("review-gallery")) {
+            const images = Array.from(gallery.querySelectorAll("img"));
+            if (!images.length) {
+                return;
+            }
+
+            gallery.classList.add("review-gallery");
+
+            const stage = document.createElement("div");
+            stage.className = "review-gallery-stage";
+
+            const stageImage = images[0].cloneNode(true);
+            stage.appendChild(stageImage);
+
+            const thumbGrid = document.createElement("div");
+            thumbGrid.className = "review-thumbs";
+
+            images.forEach((img, index) => {
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = `review-thumb${index === 0 ? " is-active" : ""}`;
+                button.setAttribute("aria-label", `View image ${index + 1}`);
+
+                const thumbImage = img.cloneNode(true);
+                button.appendChild(thumbImage);
+
+                button.addEventListener("click", () => {
+                    stageImage.src = img.src;
+                    stageImage.alt = img.alt;
+                    thumbGrid.querySelectorAll(".review-thumb").forEach((thumb) => thumb.classList.remove("is-active"));
+                    button.classList.add("is-active");
+                });
+
+                thumbGrid.appendChild(button);
+            });
+
+            gallery.innerHTML = "";
+            gallery.append(stage, thumbGrid);
+        } else if (standaloneImage && !standaloneImage.classList.contains("review-gallery")) {
+            standaloneImage.classList.add("review-gallery");
+        }
+    };
+
+    enhanceProductReviewPage();
+
     const navLinks = document.querySelector(".nav-links");
     let navToggle = document.querySelector(".nav-toggle");
 

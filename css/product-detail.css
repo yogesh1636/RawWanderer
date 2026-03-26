@@ -2,134 +2,400 @@
     padding: 6rem 0 4rem;
 }
 
-.product-layout {
+.product-detail .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.review-crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    align-items: center;
+    color: var(--muted);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+.review-crumbs a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.review-crumbs a:hover {
+    color: var(--text);
+}
+
+.product-layout,
+.product-header {
     display: grid;
-    grid-template-columns: 400px 1fr;
-    gap: 3rem;
+    grid-template-columns: minmax(320px, 440px) minmax(0, 1fr);
+    gap: 2rem;
     align-items: start;
 }
 
-.product-images {
+.product-images,
+.product-image {
     position: sticky;
-    top: 100px;
+    top: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.product-images img {
+.product-images.review-gallery {
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    background:
+        linear-gradient(180deg, rgba(247, 169, 59, 0.08), transparent 140px),
+        var(--surface-strong);
+    padding: 1.1rem;
+    box-shadow: var(--shadow);
+}
+
+.review-gallery-stage {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.product-images img,
+.product-image img,
+.review-gallery-stage img {
     width: 100%;
-    max-width: 400px;
-    height: auto;
     object-fit: contain;
-    background: rgba(35, 47, 62, 0.5);
-    border-radius: 20px;
-    padding: 1.5rem;
-    border: 1px solid rgba(255, 153, 0, 0.2);
+}
+
+.review-gallery-stage img {
+    height: 380px;
+    padding: 1.4rem;
+}
+
+.review-thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+    gap: 0.75rem;
+}
+
+.review-thumb {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.45rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.review-thumb:hover,
+.review-thumb.is-active {
+    border-color: rgba(247, 169, 59, 0.4);
+    background: rgba(247, 169, 59, 0.08);
+    transform: translateY(-2px);
+}
+
+.review-thumb img {
+    height: 72px;
+    border-radius: 12px;
+}
+
+.product-content,
+.product-main-info {
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 200px),
+        var(--surface);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.product-content + .product-content {
+    margin-top: 1.5rem;
+}
+
+.review-kicker {
+    display: inline-flex;
+    margin-bottom: 0.75rem;
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+    background: rgba(111, 228, 212, 0.12);
+    color: var(--teal);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.product-content h1,
+.product-main-info h1 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.06;
     margin-bottom: 1rem;
+    color: var(--text);
 }
 
-.product-content h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #f5f5f5;
+.product-content .rating,
+.product-main-info .rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+    color: var(--accent);
+    font-size: 1rem;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.product-content .rating {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+.review-highlight {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
 }
 
-.product-intro {
-    font-size: 1.05rem;
+.review-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 999px;
+    padding: 0.5rem 0.9rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 0.86rem;
+}
+
+.product-intro,
+.overview {
+    font-size: 1.03rem;
     line-height: 1.8;
-    color: #ccc;
-    margin-bottom: 2rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
 }
 
-.product-content h2 {
-    color: #FF9900;
-    font-size: 1.6rem;
+.review-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.review-stat {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 1rem 1.1rem;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.review-stat strong {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.review-stat span {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.review-buy-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.review-jump-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0 0.5rem;
+}
+
+.review-jump-nav a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 0.95rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
+    text-decoration: none;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 0.88rem;
+}
+
+.review-jump-nav a:hover {
+    border-color: rgba(247, 169, 59, 0.35);
+    background: rgba(247, 169, 59, 0.08);
+}
+
+.review-buy-box {
+    margin-top: 1.5rem;
+    border: 1px solid rgba(247, 169, 59, 0.18);
+    border-radius: 24px;
+    padding: 1.25rem;
+    background:
+        linear-gradient(135deg, rgba(247, 169, 59, 0.1), rgba(111, 228, 212, 0.06)),
+        rgba(255, 255, 255, 0.03);
+}
+
+.review-buy-box h3 {
+    margin-bottom: 0.45rem;
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.review-buy-box p {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.product-content h2,
+.product-main-info h2,
+.features-section h2,
+.target-audience h2,
+.price-section h2,
+.verdict h2 {
+    color: var(--accent);
+    font-size: 1.45rem;
     margin: 2rem 0 1rem;
     text-align: left;
 }
 
-.product-content ul {
+.features-section,
+.target-audience,
+.price-section,
+.verdict {
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 1.4rem;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.product-content ul,
+.features-list {
     list-style: none;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-.product-content ul li {
-    font-size: 1rem;
-    padding: 0.5rem 0;
-    color: #ccc;
-    padding-left: 1.5rem;
+.product-content ul li,
+.features-list li {
     position: relative;
+    padding: 0.55rem 0 0.55rem 1.45rem;
+    color: var(--muted);
+    font-size: 1rem;
 }
 
-.product-content ul li::before {
-    content: '✓';
+.product-content ul li::before,
+.features-list li::before {
+    content: "\2022";
     position: absolute;
     left: 0;
-    color: #FF9900;
-    font-weight: bold;
+    color: var(--accent);
+    font-weight: 700;
 }
 
 .pros-cons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
-.pros, .cons {
-    background: rgba(35, 47, 62, 0.3);
+.pros,
+.cons {
+    border-radius: 24px;
     padding: 1.5rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 153, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
 }
 
-.pros h3 {
-    color: #4CAF50;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
+.pros h2,
+.pros h3,
+.cons h2,
 .cons h3 {
-    color: #f44336;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+}
+
+.pros h2,
+.pros h3 {
+    color: #8fe0a7;
+}
+
+.cons h2,
+.cons h3 {
+    color: #ff9f9f;
 }
 
 .pros ul li::before {
-    content: '✓';
-    color: #4CAF50;
+    content: "+";
+    color: #8fe0a7;
 }
 
 .cons ul li::before {
-    content: '✗';
-    color: #f44336;
+    content: "-";
+    color: #ff9f9f;
 }
 
-@media (max-width: 968px) {
-    .product-layout {
+.price-section p,
+.verdict p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.verdict {
+    background:
+        linear-gradient(135deg, rgba(247, 169, 59, 0.08), rgba(111, 228, 212, 0.04)),
+        rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 1024px) {
+    .product-layout,
+    .product-header {
         grid-template-columns: 1fr;
-        gap: 2rem;
     }
 
-    .product-images {
+    .product-images,
+    .product-image {
         position: relative;
         top: 0;
     }
 
-    .product-images img {
-        max-width: 100%;
+    .review-gallery-stage img {
+        height: 320px;
     }
 }
 
 @media (max-width: 768px) {
-    .product-content h1 {
-        font-size: 1.5rem;
+    .product-detail {
+        padding: 5rem 0 3rem;
     }
 
+    .product-content,
+    .product-main-info {
+        padding: 1.35rem;
+        border-radius: 24px;
+    }
+
+    .review-quick-grid,
     .pros-cons {
         grid-template-columns: 1fr;
+    }
+
+    .review-buy-row,
+    .review-jump-nav {
+        flex-direction: column;
+    }
+
+    .review-gallery-stage img {
+        height: 260px;
+        padding: 1rem;
     }
 }
