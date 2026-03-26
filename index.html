@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RawWanderer - Discover the best travel gear, gadgets, and lifestyle products. Curated Amazon finds for modern explorers.">
-    <title>RawWanderer | Wander Smart. Buy Better.</title>
+    <meta name="description" content="RawWanderer helps you discover standout Amazon finds across tech, home, wellness, fitness, and everyday lifestyle essentials.">
+    <title>RawWanderer | Discover Smarter Amazon Finds</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="logo"><img src="assets/images/logoofweb.png" alt="RawWanderer"></div>
-            <ul class="nav-links">
+            <a href="index.html" class="logo" aria-label="RawWanderer home">
+                <img src="assets/images/logoofweb.png" alt="RawWanderer">
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">All Products</a></li>
                 <li><a href="comparison-whey-protein.html">Comparisons</a></li>
                 <li class="dropdown">
-                    <a href="#">Categories ▾</a>
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Categories <span aria-hidden="true">&#9662;</span></a>
                     <ul class="dropdown-menu">
                         <li><a href="electronics.html">Electronics</a></li>
-                        <li><a href="home-kitchen.html">Home & Kitchen</a></li>
-                        <li><a href="health-care.html">Health & Personal Care</a></li>
-                        <li><a href="beauty.html">Beauty & Grooming</a></li>
+                        <li><a href="home-kitchen.html">Home &amp; Kitchen</a></li>
+                        <li><a href="health-care.html">Health &amp; Personal Care</a></li>
+                        <li><a href="beauty.html">Beauty &amp; Grooming</a></li>
                         <li><a href="home-improvement.html">Home Improvement</a></li>
-                        <li><a href="fashion.html">Fashion & Accessories</a></li>
-                        <li><a href="sports.html">Sports & Fitness</a></li>
-                        <li><a href="books.html">Books & Study</a></li>
+                        <li><a href="fashion.html">Fashion &amp; Accessories</a></li>
+                        <li><a href="sports.html">Sports &amp; Fitness</a></li>
+                        <li><a href="books.html">Books &amp; Study</a></li>
                     </ul>
                 </li>
                 <li><a href="blog.html">Blog</a></li>
@@ -34,156 +41,180 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Discover Premium Products at Unbeatable Value</h1>
-            <p>Handpicked Amazon essentials for smart shoppers. Quality meets affordability.</p>
-            <div class="hero-badges">
-                <span class="badge">⭐ Verified Reviews</span>
-                <span class="badge">🚚 Free Shipping</span>
-                <span class="badge">🔒 Secure Checkout</span>
+    <header class="hero">
+        <div class="container hero-layout">
+            <div class="hero-copy">
+                <p class="hero-kicker">CURATED AMAZON FINDS FOR EVERYDAY WINNERS</p>
+                <h1>Shop fewer duds. Find the products actually worth your money.</h1>
+                <p class="hero-lead">From budget tech to home upgrades and wellness picks, RawWanderer highlights products that balance reviews, value, and real usefulness.</p>
+                <div class="hero-actions">
+                    <a href="#featured-products" class="amazon-btn">Explore Best Picks</a>
+                    <a href="products.html" class="secondary-btn">Browse All Products</a>
+                </div>
+                <div class="hero-badges">
+                    <span class="badge">Trusted categories</span>
+                    <span class="badge">Quick review pages</span>
+                    <span class="badge">Value-first recommendations</span>
+                </div>
+                <div class="hero-metrics">
+                    <div class="metric-card">
+                        <strong>25+</strong>
+                        <span>Product guides</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>8</strong>
+                        <span>Core categories</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>2026</strong>
+                        <span>Fresh buying picks</span>
+                    </div>
+                </div>
             </div>
-            <a href="#products" class="amazon-btn">Explore Products</a>
+
+            <div class="hero-panel">
+                <div class="hero-spotlight">
+                    <p class="panel-label">Spotlight Pick</p>
+                    <img src="assets/images/laptop-asus.jpg" alt="ASUS Vivobook 15 Laptop">
+                    <div class="hero-spotlight-content">
+                        <h2>ASUS Vivobook 15</h2>
+                        <p>A dependable laptop pick for students, creators, and work-from-anywhere setups.</p>
+                        <ul class="spotlight-list">
+                            <li>Intel Core i5 with 16GB RAM</li>
+                            <li>512GB SSD for fast daily use</li>
+                            <li>Balanced price-to-performance value</li>
+                        </ul>
+                        <div class="hero-spotlight-actions">
+                            <a href="product-asus-vivobook-15.html" class="amazon-btn">Read Review</a>
+                            <a href="https://amzn.to/4rHU8fE" target="_blank" rel="noopener noreferrer" class="text-link">Buy on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="value-strip">
+        <div class="container value-grid">
+            <article class="value-card">
+                <h3>Clearer shopping decisions</h3>
+                <p>Product pages focus on standout features, who the item suits, and why it is worth considering.</p>
+            </article>
+            <article class="value-card">
+                <h3>Discover by lifestyle</h3>
+                <p>Move from headphones to fitness gear, home storage, grooming, and health picks without digging.</p>
+            </article>
+            <article class="value-card">
+                <h3>Fast paths to action</h3>
+                <p>Jump straight to detailed reviews or Amazon listings with stronger calls to action across the site.</p>
+            </article>
         </div>
     </section>
 
-    <section id="products" class="featured-products">
+    <section class="discovery-section">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2>Trending Products</h2>
-                <p style="color: #ccc; font-size: 1.1rem;">Bestsellers loved by thousands of customers</p>
+            <div class="section-heading">
+                <p class="section-kicker">Start Here</p>
+                <h2>Browse by what you need right now</h2>
+                <p>Pick a lane and jump straight into the most useful corners of the site.</p>
+            </div>
+            <div class="discovery-grid">
+                <a href="electronics.html" class="discovery-card discovery-card-large">
+                    <span class="discovery-tag">Tech</span>
+                    <h3>Electronics &amp; gadgets</h3>
+                    <p>Wireless audio, laptops, daily-use gear, and smart-value tech upgrades.</p>
+                </a>
+                <a href="sports.html" class="discovery-card">
+                    <span class="discovery-tag">Fitness</span>
+                    <h3>Training essentials</h3>
+                    <p>Protein, push-up bars, and gear that supports home workouts.</p>
+                </a>
+                <a href="home-kitchen.html" class="discovery-card">
+                    <span class="discovery-tag">Home</span>
+                    <h3>Home improvement picks</h3>
+                    <p>Simple storage, organization, and daily-living upgrades.</p>
+                </a>
+                <a href="beauty.html" class="discovery-card">
+                    <span class="discovery-tag">Care</span>
+                    <h3>Beauty &amp; grooming</h3>
+                    <p>Practical personal-care products with strong everyday utility.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-products" class="featured-products">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-kicker">Editor Picks</p>
+                <h2>Trending products people keep coming back for</h2>
+                <p>A tighter set of homepage favorites with strong reviews and broad appeal.</p>
             </div>
             <div class="product-grid">
                 <div class="product-card">
-                    <div class="product-badge"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/></svg> HOT DEAL</div>
+                    <div class="product-badge">HOT DEAL</div>
                     <img src="assets/images/boat.jpg" alt="Boat Rockerz 425 Bluetooth Wireless Over Ear Headphones">
                     <div class="product-info">
                         <h3>Boat Rockerz 425</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(12,847 reviews)</span></div>
-                        <p>25H playtime, Beast Mode, Bluetooth 5.2. Best budget wireless headphones.</p>
-                        <a href="product-boat-rockerz-425.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/4ubyAd1" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
+                        <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(12,847 reviews)</span></div>
+                        <p>25-hour playtime, low-latency mode, and budget-friendly wireless performance.</p>
+                        <a href="product-boat-rockerz-425.html" class="amazon-btn product-link-alt">Read Review</a>
+                        <a href="https://amzn.to/4ubyAd1" target="_blank" rel="noopener noreferrer" class="amazon-btn">Buy on Amazon</a>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-badge" style="background: #e74c3c;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/></svg> BESTSELLER</div>
+                    <div class="product-badge product-badge-blue">BESTSELLER</div>
                     <img src="assets/images/truke.jpg" alt="truke Mega 9 True Wireless Earbuds">
                     <div class="product-info">
                         <h3>truke Mega 9</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(8,234 reviews)</span></div>
-                        <p>70H battery, 24-Bit Spatial Audio, 40ms low latency. Perfect for gamers & music lovers.</p>
-                        <a href="product-truke-mega-9.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/4cRGVvQ" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
+                        <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(8,234 reviews)</span></div>
+                        <p>Spatial audio, 70-hour battery backup, and gamer-friendly low latency.</p>
+                        <a href="product-truke-mega-9.html" class="amazon-btn product-link-alt">Read Review</a>
+                        <a href="https://amzn.to/4cRGVvQ" target="_blank" rel="noopener noreferrer" class="amazon-btn">Buy on Amazon</a>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-badge" style="background: #27ae60;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg> TOP RATED</div>
+                    <div class="product-badge product-badge-green">TOP RATED</div>
                     <img src="assets/images/laptop-asus.jpg" alt="ASUS Vivobook 15 Laptop">
                     <div class="product-info">
                         <h3>ASUS Vivobook 15</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(5,621 reviews)</span></div>
-                        <p>Intel Core i5, 16GB RAM, 512GB SSD. Perfect for students & professionals.</p>
-                        <a href="product-asus-vivobook-15.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/4rHU8fE" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
+                        <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(5,621 reviews)</span></div>
+                        <p>Strong everyday laptop for students and professionals who want reliable speed.</p>
+                        <a href="product-asus-vivobook-15.html" class="amazon-btn product-link-alt">Read Review</a>
+                        <a href="https://amzn.to/4rHU8fE" target="_blank" rel="noopener noreferrer" class="amazon-btn">Buy on Amazon</a>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-badge" style="background: #3498db;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/></svg> HOME ESSENTIAL</div>
+                    <div class="product-badge product-badge-slate">HOME PICK</div>
                     <img src="assets/images/morivahomes.jpg" alt="MorivaHomes Bathroom Shelf">
                     <div class="product-info">
-                        <h3>MorivaHomes Bathroom Shelf</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(3,412 reviews)</span></div>
-                        <p>Self-adhesive, no drill. Pack of 2 wall-mounted organizers for bathroom storage.</p>
-                        <a href="product-morivahomes-shelf.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/3OZrxDM" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
+                        <h3>MorivaHomes Shelf</h3>
+                        <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(3,412 reviews)</span></div>
+                        <p>No-drill bathroom storage that upgrades utility without adding installation hassle.</p>
+                        <a href="product-morivahomes-shelf.html" class="amazon-btn product-link-alt">Read Review</a>
+                        <a href="https://amzn.to/3OZrxDM" target="_blank" rel="noopener noreferrer" class="amazon-btn">Buy on Amazon</a>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-badge" style="background: #9b59b6;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"/><path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848Z"/></svg> CAR ESSENTIAL</div>
-                    <img src="assets/images/carneck.jpg" alt="AdroitZ Car Neck Rest Pillows">
-                    <div class="product-info">
-                        <h3>AdroitZ Car Neck Rest Pillows</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(4,892 reviews)</span></div>
-                        <p>Pack of 2 ergonomic pillows. Reduce neck pain & fatigue on long drives.</p>
-                        <a href="product-adroitz-carneck.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/4aH9lHO" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-badge" style="background: #27ae60;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.5 0.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm-3 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm-5 3a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm.5 3a3.5 3.5 0 1 0 0 7h11a3.5 3.5 0 1 0 0-7h-11z"/><path d="M11.854 8.146a.5.5 0 0 0-.708 0L8 11.293 5.854 9.146a.5.5 0 1 0-.708.708l2.5 2.5a.5.5 0 0 0 .708 0l3.5-3.5a.5.5 0 0 0 0-.708z"/></svg> HEALTHY CHOICE</div>
-                    <img src="assets/images/ritebite.jpg" alt="RiteBite Max Protein Daily Assorted Protein Bars">
-                    <div class="product-info">
-                        <h3>RiteBite Max Protein Bars</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(6,543 reviews)</span></div>
-                        <p>10g protein, 5g fiber, 21 vitamins. Healthy snack for sustained energy.</p>
-                        <a href="product-ritebite-protein.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/46zjiod" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-badge" style="background: #e67e22;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M6 2a.5.5 0 0 1 .5.5V3h3v-.5a.5.5 0 0 1 1 0V3h1a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v5.5a1.5 1.5 0 0 1-3 0V7h-3v5.5a1.5 1.5 0 0 1-3 0V7a1 1 0 0 1-1-1V5a2 2 0 0 1 2-2h1v-.5A.5.5 0 0 1 6 2z"/></svg> FITNESS GEAR</div>
-                    <img src="assets/images/shanawaz wooden.jpg" alt="Handcrafted Wooden Push-Up Bars">
-                    <div class="product-info">
-                        <h3>Push-Up Bars</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(3,287 reviews)</span></div>
-                        <p>Handcrafted wooden parallettes. Non-slip grip, reduces wrist strain.</p>
-                        <a href="product-pushup-bars.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/46vpxcu" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-badge" style="background: #e91e63;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg> BRIGHTENING</div>
+                    <div class="product-badge product-badge-rose">DAILY CARE</div>
                     <img src="assets/images/PROWL DARK LIPS FOR MEN.jpg" alt="PROWL by Tiger Shroff Lipbalm">
                     <div class="product-info">
-                        <h3>PROWL Lipbalm for Men</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(2,156 reviews)</span></div>
-                        <p>Kojic Acid + Niacinamide. SPF 30 PA+++. Brightens dark lips & protects.</p>
-                        <a href="product-prowl-lipbalm.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/46uTfhP" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
+                        <h3>PROWL Lipbalm</h3>
+                        <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(2,156 reviews)</span></div>
+                        <p>SPF-backed lip care with brightening ingredients for a more polished routine.</p>
+                        <a href="product-prowl-lipbalm.html" class="amazon-btn product-link-alt">Read Review</a>
+                        <a href="https://amzn.to/46uTfhP" target="_blank" rel="noopener noreferrer" class="amazon-btn">Buy on Amazon</a>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-badge" style="background: #8e44ad;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a.5.5 0 0 1 .5.5v7h7a.5.5 0 0 1 0 1h-7v7a.5.5 0 0 1-1 0v-7h-7a.5.5 0 0 1 0-1h7v-7A.5.5 0 0 1 8 0z"/></svg> PREMIUM</div>
-                    <img src="assets/images/wildstone1.jpg" alt="Wild Stone Edge EDP Premium Perfume">
-                    <div class="product-info">
-                        <h3>Wild Stone Edge EDP</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(8,742 reviews)</span></div>
-                        <p>100ml Premium Eau De Parfum. Long-lasting masculine fragrance for daily wear.</p>
-                        <a href="product-wildstone-edge.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/4kWEUR6" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-badge" style="background: #16a085;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 1 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg> PROTEIN</div>
-                    <img src="assets/images/GOLD WHEY1.jpg" alt="Bigmuscles Premium Gold Whey">
-                    <div class="product-info">
-                        <h3>Bigmuscles Gold Whey</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(15,234 reviews)</span></div>
-                        <p>25g protein, 11g EAAs. Informed Choice certified. Perfect for muscle growth.</p>
-                        <a href="product-bigmuscles-whey.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/4u2h1fe" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-badge" style="background: #c0392b;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/><path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/></svg> BIOZYME</div>
+                    <div class="product-badge product-badge-green">FITNESS</div>
                     <img src="assets/images/BIPZYMEWHEY1.jpg" alt="MuscleBlaze Biozyme Performance Whey">
                     <div class="product-info">
                         <h3>MuscleBlaze Biozyme Whey</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(22,456 reviews)</span></div>
-                        <p>25g protein, 50% higher absorption. Clinically tested for muscle growth.</p>
-                        <a href="product-muscleblaze-biozyme.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/4r3TzLR" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-badge" style="background: #27ae60;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/></svg> CLEAN</div>
-                    <img src="assets/images/wellbingwhey.jpg" alt="Wellbeing Nutrition Clean Whey">
-                    <div class="product-info">
-                        <h3>Wellbeing Clean Whey</h3>
-                        <div class="rating">⭐⭐⭐⭐⭐ <span style="color: #FF9900;">(18,923 reviews)</span></div>
-                        <p>26g protein, Velositol, probiotics. Bloat-free & gut-friendly isolate.</p>
-                        <a href="product-wellbeing-whey.html" class="amazon-btn" style="background: #232F3E; margin-bottom: 0.5rem;">Read Review</a>
-                        <a href="https://amzn.to/4rPpdy4" target="_blank" class="amazon-btn">🛒 Buy on Amazon</a>
+                        <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(22,456 reviews)</span></div>
+                        <p>Clinically tested whey protein with strong popularity among gym-focused buyers.</p>
+                        <a href="product-muscleblaze-biozyme.html" class="amazon-btn product-link-alt">Read Review</a>
+                        <a href="https://amzn.to/4r3TzLR" target="_blank" rel="noopener noreferrer" class="amazon-btn">Buy on Amazon</a>
                     </div>
                 </div>
             </div>
@@ -192,42 +223,43 @@
 
     <section class="categories">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2>Browse by Category</h2>
-                <p style="color: #ccc; font-size: 1.1rem;">Find exactly what you need in our organized collections</p>
+            <div class="section-heading">
+                <p class="section-kicker">All Categories</p>
+                <h2>Explore the full RawWanderer catalog</h2>
+                <p>Every collection is organized to help you compare faster and discover better product ideas.</p>
             </div>
             <div class="category-grid">
                 <a href="electronics.html" class="category-card">
                     <h3>Electronics</h3>
-                    <p>Headphones, earbuds, gadgets & tech</p>
+                    <p>Headphones, earbuds, laptops, and smart daily-use gadgets.</p>
                 </a>
                 <a href="home-kitchen.html" class="category-card">
-                    <h3>Home & Kitchen</h3>
-                    <p>Appliances, cookware & essentials</p>
+                    <h3>Home &amp; Kitchen</h3>
+                    <p>Cookware, storage, and home solutions that improve routines.</p>
                 </a>
                 <a href="health-care.html" class="category-card">
-                    <h3>Health & Personal Care</h3>
-                    <p>Wellness, hygiene & health products</p>
+                    <h3>Health &amp; Personal Care</h3>
+                    <p>Wellness products and personal-care staples for better everyday upkeep.</p>
                 </a>
                 <a href="beauty.html" class="category-card">
-                    <h3>Beauty & Grooming</h3>
-                    <p>Skincare, makeup & grooming tools</p>
+                    <h3>Beauty &amp; Grooming</h3>
+                    <p>Skincare and grooming picks built for simple, repeatable routines.</p>
                 </a>
                 <a href="home-improvement.html" class="category-card">
                     <h3>Home Improvement</h3>
-                    <p>Storage, organization & decor</p>
+                    <p>Useful upgrades for storage, organization, and home convenience.</p>
                 </a>
                 <a href="fashion.html" class="category-card">
-                    <h3>Fashion & Accessories</h3>
-                    <p>Clothing, bags & accessories</p>
+                    <h3>Fashion &amp; Accessories</h3>
+                    <p>Accessories and practical style picks that add everyday utility.</p>
                 </a>
                 <a href="sports.html" class="category-card">
-                    <h3>Sports & Fitness</h3>
-                    <p>Workout gear & fitness equipment</p>
+                    <h3>Sports &amp; Fitness</h3>
+                    <p>Workout gear, supplements, and training support for active lifestyles.</p>
                 </a>
                 <a href="books.html" class="category-card">
-                    <h3>Books & Study</h3>
-                    <p>Books, stationery & learning tools</p>
+                    <h3>Books &amp; Study</h3>
+                    <p>Learning tools, study aids, and useful reading-focused recommendations.</p>
                 </a>
             </div>
         </div>
@@ -235,24 +267,42 @@
 
     <section class="blog-preview">
         <div class="container">
-            <h2>Latest from the Blog</h2>
+            <div class="section-heading">
+                <p class="section-kicker">Fresh Reads</p>
+                <h2>Buying guides and product roundups</h2>
+                <p>Use the blog to spot trends, compare options, and plan your next purchase with more confidence.</p>
+            </div>
             <div class="blog-grid">
                 <article class="blog-card">
+                    <p class="blog-label">Travel</p>
                     <h3>Top 10 Travel Backpacks in 2026</h3>
-                    <p>Discover the best backpacks tested by real travelers...</p>
-                    <a href="blog.html" class="read-more">Read More →</a>
+                    <p>Find travel backpacks that balance carry comfort, storage, and value for longer trips.</p>
+                    <a href="blog.html" class="read-more">Read more</a>
                 </article>
                 <article class="blog-card">
+                    <p class="blog-label">Budget Tech</p>
                     <h3>Best Budget Travel Gadgets</h3>
-                    <p>Quality tech that won't break the bank...</p>
-                    <a href="blog.html" class="read-more">Read More →</a>
+                    <p>Useful travel tech that earns its spot in your bag without overspending.</p>
+                    <a href="blog.html" class="read-more">Read more</a>
                 </article>
                 <article class="blog-card">
+                    <p class="blog-label">Essentials</p>
                     <h3>Must-Have Amazon Travel Accessories</h3>
-                    <p>Small items that make a big difference...</p>
-                    <a href="blog.html" class="read-more">Read More →</a>
+                    <p>Smarter accessories that solve common travel problems and improve convenience.</p>
+                    <a href="blog.html" class="read-more">Read more</a>
                 </article>
             </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container cta-panel">
+            <div>
+                <p class="section-kicker">Ready To Dive Deeper?</p>
+                <h2>See every product page in one place.</h2>
+                <p>Browse the full catalog if you want more than the homepage highlights.</p>
+            </div>
+            <a href="products.html" class="amazon-btn">View All Products</a>
         </div>
     </section>
 
@@ -265,7 +315,7 @@
                 <a href="about.html">About</a>
             </div>
             <p>&copy; 2026 RawWanderer. All rights reserved.</p>
-            <p class="disclosure">RawWanderer is a participant in the Amazon Services LLC Associates Program. We may earn commissions from qualifying purchases.</p>
+            <p class="disclosure">RawWanderer participates in affiliate programs, including Amazon Associates, and may earn a commission from qualifying purchases.</p>
         </div>
     </footer>
 
