@@ -1,106 +1,125 @@
 # 🌍 RawWanderer
 
-> **Discover. Review. Wander Smarter.**
+### Discover. Review. Wander Smarter.
 
-A modern Amazon affiliate website for travel gear, tech gadgets, and lifestyle products curated for explorers and digital nomads.
+A modern travel-commerce and affiliate discovery platform built for explorers, travelers, and digital nomads looking for reliable gear, useful technology, and lifestyle essentials.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://your-demo-link.com)
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-
-## 🚀 Features
-
-- 🎨 Modern glassmorphism UI with dark gradients
-- 📱 Fully responsive design
-- ⚡ Fast loading & SEO optimized
-- 🛒 Amazon affiliate integration ready
-- 🎯 Product categories & filtering
-- 📝 Blog section for content marketing
-
-## 🛠️ Tech Stack
-
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with animations
-- **JavaScript** - Smooth interactions
-- **No frameworks** - Pure vanilla code
-
-## 📂 Project Structure
-
-```
-RawWanderer/
-├── index.html          # Homepage
-├── products.html       # Product catalog
-├── about.html          # About page
-├── blog.html           # Blog articles
-├── css/
-│   └── style.css       # Main stylesheet
-├── js/
-│   └── script.js       # Interactive features
-└── assets/
-    └── images/         # Product images
-```
-
-## 🎨 Color Palette
-
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Amazon Orange | `#FF9900` | Primary CTA, accents |
-| Dark | `#111111` | Background |
-| Accent | `#232F3E` | Cards, sections |
-| Light | `#f5f5f5` | Text |
-
-## 🚀 Quick Start
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/rawwanderer.git
-cd rawwanderer
-```
-
-2. **Add your Amazon affiliate links**
-   - Replace `#` in all `amazon-btn` links with your affiliate URLs
-
-3. **Open in browser**
-```bash
-# Simply open index.html in your browser
-start index.html  # Windows
-open index.html   # macOS
-```
-
-## 📦 Deployment
-
-Deploy instantly to:
-
-- **Vercel**: `vercel --prod`
-- **Netlify**: Drag & drop folder
-- **GitHub Pages**: Enable in repo settings
-
-## 💰 Monetization
-
-- Amazon Associates affiliate program
-- SEO-driven organic traffic
-- Blog content for long-tail keywords
-- Product comparison pages
-
-## 📈 SEO Strategy
-
-- Long-tail keyword targeting
-- Product review content
-- Internal linking structure
-- Schema markup ready
-- Optimized meta descriptions
-
-## ⚠️ Affiliate Disclosure
-
-This site participates in the Amazon Services LLC Associates Program. Commissions may be earned from qualifying purchases.
-
-## 📝 License
-
-MIT License - feel free to use for your own projects
-
-## 🤝 Contributing
-
-Contributions welcome! Open an issue or submit a PR.
+<p align="center">
+  <a href="https://yogesh1636.github.io/RawWanderer/">
+    <strong>🚀 View Live Demo</strong>
+  </a>
+</p>
 
 ---
 
-**Built with ❤️ for travelers and digital nomads**
+## ✨ Overview
+
+RawWanderer is a modern Amazon affiliate website designed to help travelers discover, explore, compare, and find useful products for their journeys.
+
+The platform combines a premium dark interface, glassmorphism-inspired UI, responsive design, curated product collections, and content-driven SEO to create a modern product discovery experience.
+
+Whether you're planning a backpacking trip, working remotely from another country, or looking for useful travel technology, RawWanderer brings products together in one place.
+
+---
+
+## 🌐 Live Demo
+
+🚀 **Website:**  
+https://yogesh1636.github.io/RawWanderer/
+
+---
+
+## 🎯 Features
+
+| Feature | Description |
+|---|---|
+| 🎨 Modern UI | Glassmorphism, gradients, animations, and premium visual styling |
+| 📱 Responsive | Optimized for desktop, tablet, and mobile devices |
+| ⚡ Lightweight | Built using pure HTML, CSS, and JavaScript |
+| 🛒 Affiliate Ready | Designed for Amazon Associates product links |
+| 🔎 Product Discovery | Browse products through categories and filtering |
+| 📝 Blog Section | Travel guides, reviews, buying guides, and useful content |
+| 🚀 SEO Ready | Semantic HTML, metadata, internal linking, and schema support |
+| 🌙 Dark Theme | Immersive dark-first experience for travelers and tech enthusiasts |
+
+---
+
+## 🧭 Product Categories
+
+### 🎒 Travel Gear
+
+- Backpacks
+- Travel organizers
+- Luggage
+- Packing cubes
+- Travel accessories
+
+### 💻 Digital Nomad Tech
+
+- Laptops and accessories
+- Power banks
+- Portable monitors
+- USB hubs
+- Keyboards and mice
+
+### 📷 Travel Photography
+
+- Cameras
+- Tripods
+- Action cameras
+- Memory cards
+- Camera accessories
+
+### 🔌 Travel Essentials
+
+- Universal adapters
+- Chargers
+- Travel cables
+- Portable power solutions
+- Smart gadgets
+
+### 🏕️ Outdoor & Adventure
+
+- Camping equipment
+- Hiking gear
+- Outdoor accessories
+- Adventure essentials
+
+---
+
+## 🎨 Design System
+
+RawWanderer uses a dark, immersive, technology-inspired travel aesthetic.
+
+### Color Palette
+
+| Color | Hex | Usage |
+|---|---|---|
+| 🟠 Amazon Orange | `#FF9900` | Primary CTA and highlights |
+| ⚫ Deep Black | `#111111` | Main background |
+| 🔵 Amazon Slate | `#232F3E` | Cards and secondary surfaces |
+| ⚪ Soft White | `#F5F5F5` | Primary text |
+| 🌫️ Glass | `rgba(255,255,255,0.08)` | Glassmorphism surfaces |
+
+### Visual Style
+
+- Glassmorphism cards
+- Dark gradient backgrounds
+- Soft shadows
+- Smooth transitions
+- Rounded UI elements
+- High-contrast typography
+- Responsive layouts
+- Subtle hover animations
+- Minimal and modern interfaces
+
+---
+
+## 🛠️ Tech Stack
+
+RawWanderer intentionally uses a lightweight frontend stack without unnecessary frameworks.
+
+```text
+HTML5
+CSS3
+JavaScript
